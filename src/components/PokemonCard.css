@@ -5,12 +5,24 @@
   color: rgb(186, 210, 236);
 }
 
+.card {
+  transition: 0.5s;
+}
+
+
 .card-name {
   font-weight: bold;
   font-size: 18px;
   color: rgb(252, 252, 252);
 }
 
-.card {
-  transition: 0.5s;
+.card-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.cardDate {
+  padding-bottom: 0.7rem;
 }
