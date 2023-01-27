@@ -1,11 +1,28 @@
 import React, { FunctionComponent } from 'react';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
+import PokemonDetail from './pages/PokemonDetail';
 import PokemonList from './pages/PokemonList';
+import './App.css';
 
 const App: FunctionComponent = () => {
   return (
-    <div>
-      <PokemonList />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <div className="nav-wrapper header">
+            <Link to="/" className="brand-logo center">
+              Pokédex
+            </Link>
+          </div>
+        </nav>
+      </div>
+      {/* systeme de gestion des routes */}
+      <Switch>
+        <Route exact path="/" component={PokemonList} />
+        <Route exact path="/pokemons" component={PokemonList} />
+        <Route exact path="/pokemons/:id" component={PokemonDetail} />
+      </Switch>
+    </Router>
   );
 };
 

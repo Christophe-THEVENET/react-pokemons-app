@@ -3,6 +3,7 @@ import formatDate from '../helper/format-date';
 import formatTypeOfPokemon from '../helper/format-type-of-pokemon';
 import Pokemon from '../models/pokemon';
 import './PokemonCard.css';
+import { useHistory } from 'react-router-dom';
 
 // on type les props avec Type Script
 type Props = {
@@ -26,6 +27,18 @@ const PokemonCard: FunctionComponent<Props> = ({
   };
 
   // Hook personnalisé: fonction commence par use qui appele d autre Hooks
+
+
+//  ******* useHistory ************
+
+const history = useHistory(); // on récup l historique du navigateur
+
+
+
+
+
+
+
 
   return (
     <div
