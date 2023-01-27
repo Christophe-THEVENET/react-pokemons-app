@@ -4,6 +4,12 @@ import formatTypeOfPokemon from '../helper/format-type-of-pokemon';
 import Pokemon from '../models/pokemon';
 import './PokemonCard.css';
 
+// on type les props avec Type Script
+type Props = {
+  pokemon: Pokemon;
+  borderColor?: string; // facultative
+};
+
 const PokemonCard: FunctionComponent<Props> = ({
   pokemon,
   borderColor = '#009688',
@@ -19,9 +25,7 @@ const PokemonCard: FunctionComponent<Props> = ({
     setColor('#df8d8d');
   };
 
- 
-
- 
+  // Hook personnalisé: fonction commence par use qui appele d autre Hooks
 
   return (
     <div
@@ -36,7 +40,7 @@ const PokemonCard: FunctionComponent<Props> = ({
         <div className="card-stacked">
           <div className="card-content">
             <p className="card-name">{pokemon.name}</p>
-            <p  className="cardDate">
+            <p className="cardDate">
               <small>{formatDate(pokemon.created)}</small>
             </p>
             {pokemon.types.map((type) => {
@@ -53,10 +57,4 @@ const PokemonCard: FunctionComponent<Props> = ({
   );
 };
 
-type Props = {
-  pokemon: Pokemon;
-  borderColor?: string; // facultative
-};
-
 export default PokemonCard;
-

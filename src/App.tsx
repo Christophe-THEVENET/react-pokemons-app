@@ -21,4 +21,4 @@ export default App;
 
 // - Appeler les Hooks uniquement au niveau racine du composant
 // - Appeler les Hooks uniquement depuis des composants de fonctions
-// - lL modification du state efface tout et remplace. Donc pour ajouter ds un tableau il faut tout rerentrer [...array]
+// - La modification du state efface tout et remplace. Donc pour ajouter ds un tableau il faut tout rerentrer [...array]

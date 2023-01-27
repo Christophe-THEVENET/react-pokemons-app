@@ -1,14 +1,12 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
-import Pokemon from '../models/pokemon';
-import POKEMONS from '../models/mock-pokemon';
+import React, { FunctionComponent } from 'react';
 import PokemonCard from '../components/PokemonCard';
+import usePokemons from '../hooks/usePokemons';
+
 
 const PokemonList: FunctionComponent = () => {
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
-
-  useEffect(() => {
-    setPokemons(POKEMONS);
-  }, []);
+  // l 'état des pokemon est renvoyé par le Hook perso
+  
+  const pokemons = usePokemons();
 
   return (
     <div>
@@ -16,10 +14,7 @@ const PokemonList: FunctionComponent = () => {
       <div className="container">
         <div className="row">
           {pokemons.map((pokemon) => (
-            <PokemonCard
-              key={pokemon.id}
-              pokemon={pokemon}
-            />
+            <PokemonCard key={pokemon.id} pokemon={pokemon} />
           ))}
         </div>
       </div>
