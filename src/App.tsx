@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import PokemonDetail from './pages/PokemonDetail';
 import PokemonList from './pages/PokemonList';
 import './App.css';
+import PageNotFound from './pages/PageNotFound';
+
 
 const App: FunctionComponent = () => {
   return (
@@ -21,6 +23,8 @@ const App: FunctionComponent = () => {
         <Route exact path="/" component={PokemonList} />
         <Route exact path="/pokemons" component={PokemonList} />
         <Route exact path="/pokemons/:id" component={PokemonDetail} />
+       {/*  bien déclarer en dernier la pageNotFound */}
+        <Route  component={PageNotFound} />
       </Switch>
     </Router>
   );

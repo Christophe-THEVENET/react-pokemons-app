@@ -13,7 +13,6 @@ const PokemonDetail: FunctionComponent<RouteComponentProps<Params>> = ({
 }) => {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
-  console.log(match);
 
 
   useEffect(() => {

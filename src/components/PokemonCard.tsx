@@ -35,6 +35,9 @@ const history = useHistory(); // on récup l historique du navigateur
 
 
 
+const goToPokemon = (id: number) => {
+  history.push(`/pokemons/${id}`)
+}
 
 
 
@@ -45,6 +48,7 @@ const history = useHistory(); // on récup l historique du navigateur
       className="col s6 m4"
       onMouseEnter={showBorder}
       onMouseLeave={hideBorder}
+      onClick={() => goToPokemon(pokemon.id)}
     >
       <div className="card horizontal" style={{ borderColor: color }}>
         <div className="card-image">
