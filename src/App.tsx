@@ -4,12 +4,12 @@ import PokemonDetail from './pages/PokemonDetail';
 import PokemonList from './pages/PokemonList';
 import './App.css';
 import PageNotFound from './pages/PageNotFound';
-
+import PokemonEdit from './pages/PokemonEdit';
 
 const App: FunctionComponent = () => {
   return (
     <Router>
-      <div>
+      <div className="headerMaster">
         <nav>
           <div className="nav-wrapper header">
             <Link to="/" className="brand-logo center">
@@ -22,9 +22,10 @@ const App: FunctionComponent = () => {
       <Switch>
         <Route exact path="/" component={PokemonList} />
         <Route exact path="/pokemons" component={PokemonList} />
+        <Route exact path="/pokemons/edit/:id" component={PokemonEdit} />
         <Route exact path="/pokemons/:id" component={PokemonDetail} />
-       {/*  bien déclarer en dernier la pageNotFound */}
-        <Route  component={PageNotFound} />
+        {/*  bien déclarer en dernier la pageNotFound */}
+        <Route component={PageNotFound} />
       </Switch>
     </Router>
   );
@@ -43,3 +44,4 @@ export default App;
 // - Appeler les Hooks uniquement au niveau racine du composant
 // - Appeler les Hooks uniquement depuis des composants de fonctions
 // - La modification du state efface tout et remplace. Donc pour ajouter ds un tableau il faut tout rerentrer [...array]
+

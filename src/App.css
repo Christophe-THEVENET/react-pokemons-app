@@ -1,3 +1,35 @@
-.header {
-  background-color: rgb(24, 166, 209);
+.title {
+  background-color: rgb(53, 33, 100);
+  padding: 0.5rem;
+  color: rgb(236, 212, 131);
+}
+
+.hoverable {
+  background-color: rgb(63, 40, 117);
+}
+
+nav {
+  background-color: rgb(86, 30, 124);
+}
+
+h1 {
+  font-size: 2vmax;
+}
+
+nav .brand-logo {
+  font-size: 3vmax;
+
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+form input {
+  color: aqua;
 }

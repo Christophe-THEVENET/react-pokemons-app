@@ -13,8 +13,6 @@ const PokemonDetail: FunctionComponent<RouteComponentProps<Params>> = ({
 }) => {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
-
-
   useEffect(() => {
     // on affecte le pokemon cherché ds le state
     POKEMONS.forEach((pokemon) => {
@@ -29,7 +27,7 @@ const PokemonDetail: FunctionComponent<RouteComponentProps<Params>> = ({
       {pokemon ? (
         <div className="row">
           <div className="col s12 m8 offset-m2">
-            <h2 className="header center">{pokemon.name}</h2>
+            <h2 className="header center title">{pokemon.name}</h2>
             <div className="card hoverable">
               <div className="card-image">
                 <img
@@ -37,6 +35,14 @@ const PokemonDetail: FunctionComponent<RouteComponentProps<Params>> = ({
                   alt={pokemon.name}
                   style={{ width: '250px', margin: '0 auto' }}
                 />
+                <Link
+                  to={`/pokemons/edit/${pokemon.id}`}
+                  className="btn btn-floating halfway-fab waves-effect wave-ligth"
+                >
+                  <i className="material-icons"><span className="material-symbols-outlined">
+edit
+</span></i>
+                </Link>
               </div>
               <div className="card-stacked">
                 <div className="card-content">

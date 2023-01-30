@@ -28,20 +28,13 @@ const PokemonCard: FunctionComponent<Props> = ({
 
   // Hook personnalisé: fonction commence par use qui appele d autre Hooks
 
+  //  ******* useHistory ************
 
-//  ******* useHistory ************
+  const history = useHistory(); // on récup l historique du navigateur
 
-const history = useHistory(); // on récup l historique du navigateur
-
-
-
-const goToPokemon = (id: number) => {
-  history.push(`/pokemons/${id}`)
-}
-
-
-
-
+  const goToPokemon = (id: number) => {
+    history.push(`/pokemons/${id}`);
+  };
 
   return (
     <div
